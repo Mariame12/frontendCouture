@@ -1,0 +1,29 @@
+/* .righ {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.righ .nav-item {
+    margin-left: 15px;
+}
+
+.righ .nav-item:first-child {
+    margin-left: 0;
+} */
+/* Styles for the custom navbar */
+.custom-navbar {
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+}
+
+.custom-navbar .nav-link {
+    color: white;
+}
+
+.custom-navbar .navbar-brand {
+    color: white;
+}
+
+/* Optional: Adjust icon colors */
+.custom-navbar .nav-link i {
+    color: white;
+}

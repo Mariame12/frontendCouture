@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 class="text-center">Modifier d' une mesure</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="tete"> Tête</label>
+            <input type="number" class="form-control" id="tete" [(ngModel)]="mesure.tete" name="tete">
+        </div>
+        <div class="form-group">
+            <label for="cou"> Cou</label>
+            <input type="number" class="form-control" id="cou" [(ngModel)]="mesure.cou" name="cou">
+        </div>
+        <div class="form-group">
+            <label for="epaule">Epaule</label>
+            <input type="number" class="form-control" id="epaule" [(ngModel)]="mesure.epaule" name="epaule">
+        </div>
+        <div class="form-group">
+            <label for="poitrine">Poitrine</label>
+            <input type="number" class="form-control" id="poitrine" [(ngModel)]="mesure.poitrine" name="poitrine">
+        </div>
+        <div class="form-group">
+            <label for="hanches">Hanche</label>
+            <input type="number" class="form-control" id="hanches" [(ngModel)]="mesure.hanches" name="hanches">
+        </div>
+        <div class="form-group">
+            <label for="cuisse">Cuisse</label>
+            <input type="number" class="form-control" id="cuisse" [(ngModel)]="mesure.cuisse" name="cuisse">
+        </div>
+        <div class="form-group">
+            <label for="genou">Genou</label>
+            <input type="number" class="form-control" id="genou" [(ngModel)]="mesure.genou" name="genou">
+        </div>
+
+
+
+        <button class="btn btn-success mt-2" type="submit">Modifier</button>
+    </form>
+</div>

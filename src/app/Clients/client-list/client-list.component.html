@@ -1,0 +1,35 @@
+<div class="row">
+    <h2>Liste clients</h2>
+</div>
+<table class="table table-striped table-bordered">
+    <thead>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Numero d'identiité</th>
+        <th>Adresse</th>
+        <th>Sexe</th>
+        <th>Email</th>
+        <th>Telephone</th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{client.nom}}</td>
+            <td>{{client.prenom}}</td>
+            <td>{{client.cni}}</td>
+            <td>{{client.adresse}}</td>
+            <td>{{client.sexe}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.telephone}}</td>
+
+            <td>
+                <button (click)="updateClient(client.idClient)" class="btn btn-info">Modifier</button>
+                <button (click)="deleteClient(client.idClient)" class="btn btn-danger">Supprimer</button>
+                <button (click)="clientDetails(client.idClient)" class="btn bg-primary">Details</button>
+
+                <button (click)="redirectToCreateMesure(client.idClient)" class="btn btn-primary">Créer Mesure</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

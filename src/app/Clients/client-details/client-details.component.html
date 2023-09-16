@@ -1,0 +1,119 @@
+<!-- <h2>Client Details</h2>
+<hr />
+<div *ngIf="client">
+    <div>
+        <label><b>Nom: </b></label> {{client.nom}}
+    </div>
+    <div>
+        <label><b>Last Name: </b></label> {{client.prenom}}
+    </div>
+    <div>
+        <label><b>Numero carte d'identité: </b></label>{{client.cni}}
+    </div>
+    <div>
+        <label><b>Adresse: </b></label>{{client.adresse}}
+    </div>
+    <div>
+        <label><b>Sexe: </b></label>{{client.sexe}}
+    </div>
+    <div>
+        <label><b>Email: </b></label>{{client.email}}
+    </div>
+    <div>
+        <label><b>Numéro de téléphone: </b></label>{{client.telephone}}
+    </div>
+</div>
+<table class="table table-striped table-bordered">
+    <thead>
+        <th>Tete</th>
+        <th>Cou</th>
+        <th>Epaule</th>
+        <th>Poitrine</th>
+        <th>Hanche</th>
+        <th>Cuisse</th>
+        <th>Genou</th>
+        <th>Mollet</th>
+        <th>Cheville</th>
+        <th>Bicept</th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let mes  mesure">
+            <td>{{mes.tete}}</td>
+            <td>{{mes.cou}}</td>
+            <td>{{mes.epaule}}</td>
+            <td>{{mes.poitrine}}</td>
+            <td>{{mes.hanches}}</td>
+            <td>{{mes.cuisse}}</td>
+            <td>{{mes.genou}}</td>
+            <td>{{mes.Mollet}}</td>
+            <td>{{mes.cheville}}</td>
+            <td>{{mes.Bicept}}</td>
+
+             <td>
+                <button (click)="updateMesure(mes.idMesure)" class="btn btn-info">Modifier</button>
+                <button (click)="deleteMesure(mes.idMesure)" class="btn btn-danger">Supprimer</button>
+            </td> 
+        </tr>
+
+    </tbody>
+</table>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retour à la Liste</button><br> -->
+<h2>Client Details</h2>
+<hr />
+<div *ngIf="client">
+    <div>
+        <label><b>Nom: </b></label> {{client.nom}}
+    </div>
+    <div>
+        <label><b>Last Name: </b></label> {{client.prenom}}
+    </div>
+    <div>
+        <label><b>Numero carte d'identité: </b></label>{{client.cni}}
+    </div>
+    <div>
+        <label><b>Adresse: </b></label>{{client.adresse}}
+    </div>
+    <div>
+        <label><b>Sexe: </b></label>{{client.sexe}}
+    </div>
+    <div>
+        <label><b>Email: </b></label>{{client.email}}
+    </div>
+    <div>
+        <label><b>Numéro de téléphone: </b></label>{{client.telephone}}
+    </div>
+</div>
+<table class="table table-striped table-bordered">
+    <thead>
+        <th>Tete</th>
+        <th>Cou</th>
+        <th>Epaule</th>
+        <th>Poitrine</th>
+        <th>Hanche</th>
+        <th>Cuisse</th>
+        <th>Genou</th>
+        <th>Mollet</th>
+        <th>Cheville</th>
+        <th>Bicept</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{client.mesure.tete}}</td>
+            <td>{{client.mesure.tete}}</td>
+            <td>{{client.mesure.epaule}}</td>
+            <td>{{client.mesure.poitrine}}</td>
+            <td>{{client.mesure.hanches}}</td>
+            <td>{{client.mesure.cuisse}}</td>
+            <td>{{client.mesure.genou}}</td>
+            <td>{{client.mesure.mollet}}</td>
+            <td>{{client.mesure.cheville}}</td>
+            <td>{{client.mesure.biceps}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retour à la Liste</button>

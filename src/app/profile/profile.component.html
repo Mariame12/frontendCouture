@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <p>Bonjour {{ currentUser.username }} !</p>
+                    <a href class="nav-link" (click)="logout()">
+                        <i class="fas fa-sign-out-alt"></i> LogOut
+                    </a>
+                    <!-- <button class="btn btn-dark btn-lg btn-block" type="button" (click)="logout()">Se
+                        deconnecter</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <h2 class="text-center">Creation d' un client</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="nom"> Nom</label>
+            <input type="text" class="form-control" id="nom" [(ngModel)]="client.nom" name="nom">
+        </div>
+        <div class="form-group">
+            <label for="prenom"> Prenom</label>
+            <input type="text" class="form-control" id="prenom" [(ngModel)]="client.prenom" name="prenom">
+        </div>
+        <div class="form-group">
+            <label for="cni">Numero de la carte d identiité</label>
+            <input type="text" class="form-control" id="cni" [(ngModel)]="client.cni" name="cni">
+        </div>
+        <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <input type="text" class="form-control" id="adresse" [(ngModel)]="client.adresse" name="adresse">
+        </div>
+        <div class="form-group">
+            <label for="sexe">Sexe:</label>
+            <select [(ngModel)]="client.sexe" class="form-control" id="sexe" name="sexe">
+                <option value="" disabled selected>Sélectionnez le sexe</option>
+                <option value="masculin">Masculin</option>
+                <option value="feminin">Féminin</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="client.email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="tel" class="form-control" id="telephone" [(ngModel)]="client.telephone" name="telephone">
+        </div>
+
+
+
+        <button class="btn btn-success mt-2" type="submit">Envoyer</button>
+    </form>
+</div>

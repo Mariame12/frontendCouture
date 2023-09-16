@@ -1,0 +1,33 @@
+<div class="row">
+    <h2>Listes mesures</h2>
+</div>
+<table class="table table-striped table-bordered">
+    <thead>
+        <th>Tete</th>
+        <th>Cou</th>
+        <th>Epaule</th>
+        <th>Poitrine</th>
+        <th>Hanche</th>
+        <th>Cuisse</th>
+        <th>Genou</th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let mes of mesure">
+            <td>{{mes.tete}}</td>
+            <td>{{mes.cou}}</td>
+            <td>{{mes.epaule}}</td>
+            <td>{{mes.poitrine}}</td>
+            <td>{{mes.hanches}}</td>
+            <td>{{mes.cuisse}}</td>
+            <td>{{mes.genou}}</td>
+
+            <td>
+                <button (click)="updateMesure(mes.idMesure)" class="btn btn-info">Modifier</button>
+                <button (click)="deleteMesure(mes.idMesure)" class="btn btn-danger">Supprimer</button>
+                <button (click)="mesureDetails(mes.idMesure)" class="btn bg-primary">Details</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

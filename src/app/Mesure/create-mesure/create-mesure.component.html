@@ -1,0 +1,109 @@
+<div class="container">
+    <!-- <h4 class="text-center">Creation d' une mesure</h4> -->
+    <h4 class="text-center">Creation d'une mesure {{ clientName }}</h4>
+    <form (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col">
+                <label for="tete"> Tête</label>
+                <input type="number" class="form-control" id="tete" [(ngModel)]="mesure.tete" name="tete">
+            </div>
+            <div class="col">
+                <label for="cou"> Cou</label>
+                <input type="number" class="form-control" id="cou" [(ngModel)]="mesure.tete" name="cou">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="epaule">Epaule</label>
+                <input type="number" class="form-control" id="epaule" [(ngModel)]="mesure.epaule" name="epaule">
+            </div>
+            <div class="col">
+                <label for="poitrine">Poitrine</label>
+                <input type="number" class="form-control" id="poitrine" [(ngModel)]="mesure.poitrine" name="poitrine">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="hanches">Hanche</label>
+                <input type="number" class="form-control" id="hanches" [(ngModel)]="mesure.hanches" name="hanches">
+            </div>
+            <div class="col">
+                <label for="cuisse">Cuisse</label>
+                <input type="number" class="form-control" id="cuisse" [(ngModel)]="mesure.cuisse" name="cuisse">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="genou">Genou</label>
+                <input type="number" class="form-control" id="genou" [(ngModel)]="mesure.genou" name="genou">
+            </div>
+            <div class="col">
+                <label for="mollet"> Mollet</label>
+                <input type="number" class="form-control" id="mollet" [(ngModel)]="mesure.mollet" name="mollet">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="cheville"> Cheville</label>
+                <input type="number" class="form-control" id="cheville" [(ngModel)]="mesure.cheville" name="cheville">
+            </div>
+            <div class="col">
+                <label for="biceps">Biceps</label>
+                <input type="number" class="form-control" id="biceps" [(ngModel)]="mesure.biceps" name="biceps">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="coude">Coude</label>
+                <input type="number" class="form-control" id="coude" [(ngModel)]="mesure.coude" name="coude">
+            </div>
+            <div class="col">
+                <label for="avantBras">AvantBras</label>
+                <input type="number" class="form-control" id="avantBras" [(ngModel)]="mesure.avantBras"
+                    name="avantBras">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="poignetCoude">PoignetCoude</label>
+                <input type="number" class="form-control" id="poignetCoude" [(ngModel)]="mesure.poignetCoude"
+                    name="poignetCoude">
+            </div>
+            <div class="col">
+                <label for="entreJambe">EntreJambe</label>
+                <input type="number" class="form-control" id="entreJambe" [(ngModel)]="mesure.entreJambe"
+                    name="entreJambe">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="coutureExt">CoutureExt</label>
+                <input type="number" class="form-control" id="coutureExt" [(ngModel)]="mesure.coutureExt"
+                    name="coutureExt">
+            </div>
+            <div class="col">
+                <label for="hTotale">HTotale</label>
+                <input type="number" class="form-control" id="hTotale" [(ngModel)]="mesure.hTotale" name="hTotale">
+            </div>
+        </div>
+        <div class="row">
+            <ng-container *ngIf="client && client.sexe === 'feminin'">
+                <div class="col">
+                    <label for="dessousPoit">DessousPoit</label>
+                    <input type="number" class="form-control" id="dessousPoit" [(ngModel)]="mesure.dessousPoit"
+                        name="dessousPoit">
+                </div>
+                <div class="col">
+                    <label for="cretesIliaque">CretesIliaque</label>
+                    <input type="number" class="form-control" id="cretesIliaque" [(ngModel)]="mesure.cretesIliaque"
+                        name="cretesIliaque">
+                </div>
+                <div class="col">
+                    <label for="LDos">LDos</label>
+                    <input type="number" class="form-control" id="LDos" [(ngModel)]="mesure.LDos" name="LDos">
+                </div>
+            </ng-container>
+        </div>
+        <button class="btn btn-success mt-2" type="submit">Envoyer</button>
+    </form>
+</div>
